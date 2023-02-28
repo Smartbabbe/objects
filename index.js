@@ -101,3 +101,35 @@ thirdSong.title = "No tears left to cry"
 const fourthSong = Object.assign({}, thirdSong)
 fourthSong.title = "Right there";
 fourthSong.yearReleased = 2013;
+
+/**
+ * QUESTION 5
+ * As Nigeria goes to the polls, here is an object representing some of the Presidential Candidates:
+
+const presidentialCandidates = {
+   AAC: 'Omoyele Sowore',
+   ACCORD: 'Christopher Imumolen',
+   APC: 'Bola Ahmed Tinubu',
+   LP: 'Peter Obi',
+   NNPP: 'Rabiu Kwankwaso',
+   PDP: 'Atiku Abubakar',
+}
+
+
+Using any of the enumeration methods taught in class (for…in  or for..of), log out each of the presidential candidates in this format:
+	’Omoyele Sowore is the presidential candidate of AAC’
+ */
+// ANSWER TO ASSIGNMENT 5
+
+const presidentialCandidates = {
+    AAC: 'Omoyele Sowore',
+    ACCORD: 'Christopher Imumolen',
+    APC: 'Bola Ahmed Tinubu',
+    LP: 'Peter Obi',
+    NNPP: 'Rabiu Kwankwaso',
+    PDP: 'Atiku Abubakar',
+ }
+
+ for (let candidate in presidentialCandidates){
+    console.log(presidentialCandidates[candidate] + " is the presidential candidate of " + candidate)
+ }
