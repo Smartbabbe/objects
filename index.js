@@ -70,6 +70,34 @@ person1.scores = person1_scores
  */
 // ANSWER TO ASSIGNMENT 4.
 
+function music(artist, title, yearReleased) {
+    return{
+        artist: artist,
+        title: title,
+        yearReleased: yearReleased,
+    }
+}
+
+const firstSong = music("Ariana Grande", "Sweetener", 2018)
+
+// Method 1 - Using the JSON.parse(JSON.strigify())
+//Example.
+
+const secondSong = JSON.parse(JSON.stringify(firstSong));
+
+secondSong.title = "7 Rings";
+secondSong.yearReleased = 2019;
+
 /**
- * 
+ * Method 2 - using the spread method (...)
  */
+const thirdSong = {...firstSong}
+thirdSong.title = "No tears left to cry"
+
+/**
+ * Method 3 - using the Object.assign() method
+ */
+
+const fourthSong = Object.assign({}, thirdSong)
+fourthSong.title = "Right there";
+fourthSong.yearReleased = 2013;
